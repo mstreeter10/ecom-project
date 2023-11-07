@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+p, a {
+    font-family: 'Segoe UI';
+}
+
 .topnav {
     background-color: #333;
     overflow: hidden;
@@ -33,5 +37,36 @@ body {
 .topnav a.logo:hover {
     background-color: #0e0c0c;
     color: #f2f2f2;
+}
+
+.welcome {
+    position: relative;
+    background:url(imgs/bg3.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 120px;
+}
+
+.welcome-txt {
+    text-align: center;
+    color: #f2f2f2;
+}
+
+.welcome-txt h2{
+    font-family: 'Segoe UI';
+}
+
+.welcome-btn {
+    width: 150px;
+    height: 40px;
+    background: #444;
+    color: #f2f2f2;;
+    border: none;
+    border-radius: 3px;
+    transition: .3s linear;
+}
+
+.welcome-btn:hover{
+    background: #555;
 }
 
