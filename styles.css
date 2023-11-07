@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 
-p, a {
+p, a, h2, address {
     font-family: 'Segoe UI';
 }
 
@@ -52,10 +52,6 @@ p, a {
     color: #f2f2f2;
 }
 
-.welcome-txt h2{
-    font-family: 'Segoe UI';
-}
-
 .welcome-btn {
     width: 150px;
     height: 40px;
@@ -66,7 +62,31 @@ p, a {
     transition: .3s linear;
 }
 
-.welcome-btn:hover{
+.welcome-btn:hover {
     background: #555;
+}
+
+.contact {
+    background: #333;
+    padding: 40px 10px 100px;
+    color: #f2f2f2;
+}
+
+.contact h2.logo {
+    padding: 0 0 30px;
+}
+
+.contact address.contact{
+    padding: 0 0 0;
+    margin: 0 0 0;
+}
+
+.contact p.contact{
+    padding: 0 0 0;
+    margin: 0 0 0;
+}
+
+.contact img.icon{
+    width: 14px;
 }
 
