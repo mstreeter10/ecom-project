@@ -1,4 +1,4 @@
-body {
+body.normal {
     margin: 0;
     background-color: #ddd;
 }
@@ -40,9 +40,13 @@ p, a, h1, h2, address {
     color: #f2f2f2;
 }
 
+.topnav a.loginbtn {
+    float: right;
+}
+
 .welcome {
     position: relative;
-    background:url(imgs/bg3.jpg)no-repeat;
+    background:url(../imgs/bg3.jpg)no-repeat;
     background-position: center;
     background-size: cover;
     padding: 120px;
@@ -138,3 +142,24 @@ p, a, h1, h2, address {
     width: 14px;
 }
 
+/* Shop things */
+.shelf {
+    text-align: right;
+ }
+ 
+ .list1 {
+   font-family: 'Segoe UI';
+   font-size: 19px;
+ }
+ 
+ .par {
+       margin-top: 30px;
+       margin-right: 150px;
+       margin-left: 350px;
+ }
+ 
+ .h1 {
+      justify-content: left;
+      margin-right: 300px;
+ }
+/* ~Shop things~ */
