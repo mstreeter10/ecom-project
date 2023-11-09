@@ -1,6 +1,7 @@
 body.normal {
     margin: 0;
     background-color: #ddd;
+    overflow-x: hidden;
 }
 
 p, a, h1, h2, address {
@@ -107,7 +108,7 @@ p, a, h1, h2, address {
 }
 
 .featured-item img:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: .1s linear;
 }
 
@@ -121,7 +122,9 @@ p, a, h1, h2, address {
 .contact {
     background: #333;
     padding: 40px 10px 80px;
+    margin: 0;
     color: #f2f2f2;
+    z-index: 1;
 }
 
 .contact h2.logo {
@@ -143,23 +146,106 @@ p, a, h1, h2, address {
 }
 
 /* Shop things */
-.shelf {
-    text-align: right;
- }
- 
- .list1 {
-   font-family: 'Segoe UI';
-   font-size: 19px;
- }
- 
- .par {
-       margin-top: 30px;
-       margin-right: 150px;
-       margin-left: 350px;
- }
- 
- .h1 {
-      justify-content: left;
-      margin-right: 300px;
- }
+.shopmain {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    white-space: nowrap;
+}
+
+.shop {
+    display: inline-block;
+    vertical-align:top;
+    margin: 0;
+    padding: 0;
+}
+
+.shop-item {
+    padding: 0 50px 0;
+    height:  350px;
+    position:relative;
+    float: left;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.shop-item img{
+    vertical-align: middle;
+    width: 150px;
+}
+
+.shop-item img:hover{
+    transform: scale(1.05);
+    transition: .1s linear;
+}
+
+.shop-item p{
+    position: absolute;
+    bottom: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shop-btn{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 30px;
+    background: #444;
+    color: #f2f2f2;;
+    border: none;
+    border-radius: 3px;
+    transition: .3s linear;
+}
+
+.shop-btn:hover {
+    background: #555;
+}
+
+.sidenav {
+    height: auto;
+    width: 240px;
+    top: 0;
+    left: 0;
+    position: relative;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 60px;
+    padding-bottom: 1250px;
+    transition: 0.5s;
+    margin: 0;
+    display: inline-block;
+}
+
+.sidenav a {
+    padding: 8px 8px 0px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #111;
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    margin-left: 50px;
+}
+
+.sidenav .closebtn img {
+    width: 25px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
 /* ~Shop things~ */

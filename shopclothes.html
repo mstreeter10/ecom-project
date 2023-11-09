@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shop</title>
+        <meta charset="utf-8" />
+		<meta name="description" content="shop" /> 
+		<meta name="author" content="" />
+		<meta name="keywords" content="shop" />
+        <link rel="stylesheet" href="css/styles.css">
+		<script>
+			var nav = (function() {
+  				var open = true;
+  				return {
+    				pubToggleNavVar: function () {
+						if (open == true) open = false;
+						else open = true;
+    				}, 
+					pubGetStatus: function () {
+						console.log(open);
+						return open;
+    				}
+				};
+			})();
+			
+			function toggleNav() {
+				if (nav.pubGetStatus()) {
+					nav.pubToggleNavVar();
+					document.getElementById("nav").style.width = "50px";
+					document.getElementById("navIcon").src="imgs/navopen.png";
+					var elements = document.getElementsByName("navItem");
+					for (var i = 0; i < elements.length; i++) {
+    					elements[i].style.setProperty('color', '#fff');
+						elements[i].style.setProperty('pointer-events', 'none');
+					}
+				}
+				else {
+					nav.pubToggleNavVar();
+					document.getElementById("nav").style.width = "240px";
+					document.getElementById("navIcon").src="imgs/navclose.png";
+					var elements = document.getElementsByName("navItem");
+					for (var i = 0; i < elements.length; i++) {
+    					elements[i].style.setProperty('color', '#111');
+						elements[i].style.setProperty('pointer-events', 'all');
+					}
+				}
+			}
+		</script>
+    </head>
+    <body class="normal">
+        <nav class="topnav">
+            <a class="logo" href="index.html">Thrifty</a>
+            <a href="index.html">Home</a>
+            <a class="active" href="shopall.html">Shop</a>
+            <a class="loginbtn" href="login.html">Login</a>
+            <a class="loginbtn" href="register.html">Register</a>
+        </nav>
+		<div class="shopmain">
+			<div id="nav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="toggleNav()"><img id="navIcon" src="imgs/navclose.png" alt="close"></a>
+				<a href="shopall.html" name="navItem" >All Items</a>
+				<a href="shopclothes.html" name="navItem" >Clothes</a>
+				<a href="shopschool.html" name="navItem" >School Supplies</a>
+				<a href="shopfurniture.html" name="navItem" >Furniture</a>
+				<a href="shopdevices.html" name="navItem" >Devices</a>
+				<a href="shopdiscount.html" name="navItem" >Student Discounted</a>
+			</div>
+			<div class="shop">
+				<div class="shop-item">
+					<span class="helper"></span>
+					<img src="imgs/featured1.png" alt="featured1"/>
+					<p>Gildan Sweatshirt (Black): $20.00</p>
+					<button class="shop-btn">BUY NOW</button>
+				</div>
+				<div class="shop-item">
+					<span class="helper"></span>
+					<img src="imgs/boots.jpg" alt="boots"/>
+					<p>Men's black boots: $7.00</p>
+					<button class="shop-btn">BUY NOW</button>
+				</div>
+				<div class="shop-item">
+					<span class="helper"></span>
+					<img src="imgs/coat.jpg" alt="coat"/>
+					<p> Women's trench coat: $14.00</p>
+					<button class="shop-btn">BUY NOW</button>
+				</div>
+			</div>
+		</div>
+        <footer class="contact">
+            <h2 class="logo">Thrifty</h2>
+            <p>
+                Thank you for visiting Thrifty's online storefront. <br />
+                To contact us, use the addresses for email and location listed below.
+            </p>
+            <address class="contact"><img src="imgs/address.png" alt="icon" class="icon"/>123 Store Street</address>
+            <p class="contact"><img src="imgs/email.png" alt="icon" class="icon"/> contact@thrifty.com</p>
+        </footer>
+    </body>
+</html>
