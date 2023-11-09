@@ -5,6 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reglog.css">
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("loginUsername").value;
+            var password = document.getElementById("loginPassword").value;
+            var errorMessage = document.getElementById("error");
+
+            if (username === "" || password === "") {
+                errorMessage.textContent = "Both fields are required";
+                return false;
+            }
+
+            // You can add more advanced validation here, like checking against a database
+
+            return true;
+        }
+    </script>
 </head>
 <body class="loginstyle">
     <div class="login">
@@ -14,32 +30,15 @@
         <form onsubmit="return validateLogin()" class="login-form">
             <div class="form-group">
                 <label for="loginUsername">Username:</label>
-                <input type="text" id="loginUsername" name="loginUsername" required>
+                <input type="text" id="loginUsername" name="loginUsername">
             </div>
             <div class="form-group">
                 <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" name="loginPassword" required>
+                <input type="password" id="loginPassword" name="loginPassword">
             </div>
+            <p class="error-message" id="error" name="error"></p>
             <button type="submit" class="btn-submit">Login</button>
-            <p class="error-message" id="errorText"></p>
         </form>
     </div>
-
-    <script>
-        function validateLogin() {
-            var username = document.getElementById("loginUsername").value;
-            var password = document.getElementById("loginPassword").value;
-            var errorText = document.getElementById("errorText");
-
-            if (username === "" || password === "") {
-                errorText.textContent = "Both fields are required";
-                return false;
-            }
-
-            // You can add more advanced validation here, like checking against a database
-
-            return true;
-        }
-    </script>
 </body>
 </html>
