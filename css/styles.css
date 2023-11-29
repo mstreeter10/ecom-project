@@ -17,9 +17,10 @@ p, a, h1, h2, address {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    height: 26px;
+    padding: 16px 14px;
 }
 
 .topnav a:hover {
@@ -33,12 +34,17 @@ p, a, h1, h2, address {
 }
 
 .topnav a.logo {
-    background-color: #0e0c0c;
+    background-color: #777;
 }
 
 .topnav a.logo:hover {
-    background-color: #0e0c0c;
-    color: #f2f2f2;
+    background-color: #777;
+}
+
+.topnav a.logo img {
+    height: 27px;
+    overflow: hidden;
+    background-color: #777;
 }
 
 .topnav a.loginbtn {
@@ -70,6 +76,7 @@ p, a, h1, h2, address {
 
 .welcome-btn:hover {
     background: #555;
+    cursor: pointer;
 }
 
 .about {
@@ -98,13 +105,21 @@ p, a, h1, h2, address {
 
 .featured-item {
     padding: 0 50px 0;
-    height: 400px;
+    height: 330px;
     white-space: nowrap;
     position:relative;
 }
 
 .featured-item img{
     width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    border: 1px solid #0e0c0c;
+    border-radius: 3px;
+}
+
+.featured-item img:hover{
+    cursor: pointer;
 }
 
 .featured-item img:hover{
@@ -121,14 +136,15 @@ p, a, h1, h2, address {
 
 .contact {
     background: #333;
-    padding: 40px 10px 80px;
+    padding: 40px 30px 80px;
     margin: 0;
     color: #f2f2f2;
     z-index: 1;
 }
 
-.contact h2.logo {
-    padding: 0 0 30px;
+.contact img.logo {
+    padding: 16px 0 30px;
+    height: 50px;
 }
 
 .contact address.contact {
@@ -149,52 +165,46 @@ p, a, h1, h2, address {
 .shopmain {
     padding: 0;
     margin: 0;
-    height: auto;
+    border: 0;
     white-space: nowrap;
+    display: inline-flex;
+    min-height: 1000px;
 }
 
 .shop {
-    display: inline-block;
+    display: inline;
     vertical-align:top;
     margin: 0;
     padding: 0;
 }
 
 .shop-item {
-    padding: 0 50px 0;
-    height:  350px;
-    position:relative;
+    height: 250px;
+    width: 260px;
     float: left;
+    padding-top: 30px;
 }
 
-.helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-
-.shop-item img{
-    vertical-align: middle;
+.shop-item img {
     width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    border: 1px solid #0e0c0c;
+    border-radius: 3px;
+    display: table;
+    margin: 0 auto;
 }
 
-.shop-item img:hover{
+.shop-item img:hover {
     transform: scale(1.05);
     transition: .1s linear;
 }
 
-.shop-item p{
-    position: absolute;
-    bottom: 1;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.shop-item p {
+    text-align: center;
 }
 
-.shop-btn{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.shop-btn {
     width: 80px;
     height: 30px;
     background: #444;
@@ -202,25 +212,28 @@ p, a, h1, h2, address {
     border: none;
     border-radius: 3px;
     transition: .3s linear;
+    display: table;
+    margin: 0 auto;
 }
 
 .shop-btn:hover {
     background: #555;
+    cursor: pointer;
 }
 
 .sidenav {
-    height: auto;
-    width: 240px;
+    width: 250px;
     top: 0;
     left: 0;
     position: relative;
     background-color: #fff;
     overflow-x: hidden;
     padding-top: 60px;
-    padding-bottom: 1250px;
     transition: 0.5s;
     margin: 0;
     display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 .sidenav a {
