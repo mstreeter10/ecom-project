@@ -33,6 +33,14 @@ p, a, h1, h2, address {
     color: white;
 }
 
+.topnav a.cartbtn {
+    float: right;
+}
+
+.topnav a.cartbtn img {
+    height: 27px;
+}
+
 .topnav a.logo {
     background-color: #777;
 }
@@ -163,6 +171,7 @@ p, a, h1, h2, address {
 
 .contact .left {
     float: left;
+    width: 50%;
 }
 
 .contact .right {
@@ -178,7 +187,6 @@ p, a, h1, h2, address {
     color: #f2f2f2;
     text-decoration: none;
     padding-bottom: 3px;
-    text-align: center;
 }
 
 .contact .footnav a:hover {
@@ -205,6 +213,10 @@ p, a, h1, h2, address {
     vertical-align:top;
     margin: 0;
     padding: 0;
+}
+
+.shopform {
+    float: left;
 }
 
 .shop-item {

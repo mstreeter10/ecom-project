@@ -51,6 +51,7 @@
             <a class="logo" href="index.html"><img src="imgs/logo.png" alt="logo" /></a>
             <a href="index.html">Home</a>
             <a class="active" href="shopall.html">Shop</a>
+			<a class="cartbtn" href=""><img src="imgs/cart.png" alt="logo" /></a>
             <a class="loginbtn" href="login.html">Login</a>
             <a class="loginbtn" href="register.html">Register</a>
         </nav>
@@ -65,21 +66,27 @@
 				<a href="shopdiscount.html" name="navItem" >Student Discounted</a>
 			</div>
 			<div class="shop">
+			<form action="purchase.php" method="post" class="shopform">
 				<div class="shop-item">
 					<img src="imgs/featured1.png" alt="featured1"/>
 					<p>Gildan Sweatshirt (Black): $20.00</p>
-					<button class="shop-btn">BUY NOW</button>
+					<button class="shop-btn"name="shopitem" value="gilden">BUY NOW</button>
 				</div>
+			</form>
+			<form action="purchase.php" method="post" class="shopform">
 				<div class="shop-item">
 					<img src="imgs/boots.jpg" alt="boots"/>
 					<p>Men's black boots: $7.00</p>
-					<button class="shop-btn">BUY NOW</button>
+					<button class="shop-btn" name="shopitem" value="boots">BUY NOW</button>
 				</div>
+			</form>
+			<form action="purchase.php" method="post" class="shopform">
 				<div class="shop-item">
 					<img src="imgs/coat.jpg" alt="coat"/>
 					<p> Women's trench coat: $14.00</p>
-					<button class="shop-btn">BUY NOW</button>
+					<button class="shop-btn" name="shopitem" value="coat">BUY NOW</button>
 				</div>
+			</form>
 			</div>
 		</div>
         <footer class="contact">

@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/reglog.css">
     <script>
         function validateRegistration() {
-            var username = document.getElementById("regUsername").value;
-            var password = document.getElementById("regPassword").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
             var confirmPassword = document.getElementById("confirmPassword").value;
             var errorMessage = document.getElementById("error");
 
@@ -43,14 +43,14 @@
         <header>
             <h1>Registration</h1>
         </header>
-        <form action="login.html" onsubmit="return validateRegistration()" class="registration-form">
+        <form action="insert.php" method="post" onsubmit="return validateRegistration()" class="registration-form">
             <div class="form-group">
-                <label for="regUsername">Username:</label>
-                <input type="text" id="regUsername" name="regUsername">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
             </div>
             <div class="form-group">
-                <label for="regPassword">Password:</label>
-                <input type="text" id="regPassword" name="regPassword">
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password">
             </div>
             <div class="form-group">
                 <label for="confirmPassword">Confirm Password:</label>
